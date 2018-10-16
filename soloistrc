@@ -28,42 +28,45 @@ recipes:
 # development (rails)
 - sprout-rbenv
 - sprout-ruby
-- sprout-mysql
-- sprout-postgresql
+#- sprout-mysql
+#- sprout-postgresql
 
 # apps (editors)
-- sprout-jetbrains-editors::rubymine
+#- sprout-jetbrains-editors::rubymine
 
 node_attributes:
   sprout:
+    rbenv:
+      rubies: ['2.5.1']
+      default_ruby: '2.5.1'
     git:
-      domain: pivotal.io
-      authors:
-        - initials: ah
-          name: Abhijit Hiremagalur
-          username: abhi
-        - initials: bc
-          name: Brian Cunnie
-          username: cunnie
-        - initials: jrhb
-          name: Jonathan Barnes
-        - initials: lw
-          name: Luke Winikates
-          username: lwinikates
+#      domain: pivotal.io
+#      authors:
+#        - initials: ah
+#          name: Abhijit Hiremagalur
+#          username: abhi
+#        - initials: bc
+#          name: Brian Cunnie
+#          username: cunnie
+#        - initials: jrhb
+#          name: Jonathan Barnes
+#        - initials: lw
+#          name: Luke Winikates
+#          username: lwinikates
       projects:
         -
           name: sprout-wrap
           url: https://github.com/pivotal-sprout/sprout-wrap.git
-    terminal:
-      default_profile: 'Pro'
-    settings:
-      clock_format: EEE MMM d  h:mm:ss a
+#    terminal:
+#      default_profile: 'Pro'
+#    settings:
+#      clock_format: EEE MMM d  h:mm:ss a
     dock_preferences:
-      orientation: 'left'
+      orientation: 'bottom'
       auto_hide: true
-      clear_apps: true
+#      clear_apps: true
       tile_size: 35
-      magnification: false
+      magnification: true
   homebrew:
     formulas:
       - ag
@@ -75,9 +78,12 @@ node_attributes:
       - vim
       - watch
       - wget
+      - golang
     casks:
-      - firefox
-      - flycut
+#      - firefox
+#      - flycut
       - google-chrome
-      - google-hangouts
-      - vagrant
+#      - google-hangouts
+#      - vagrant
+      - sublime-text
+      - anaconda
