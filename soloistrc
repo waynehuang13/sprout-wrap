@@ -36,6 +36,9 @@ recipes:
 
 node_attributes:
   sprout:
+    sprout-osx-settings:
+      function_keys:
+        use_function_keys_as_function_keys: false
     rbenv:
       rubies: ['2.5.1']
       default_ruby: '2.5.1'
